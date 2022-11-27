@@ -27,3 +27,7 @@ Route::get('/AdminLogin', function () {
 Route::get('/UserRegister', function () {
     return view('userRegister');
 });
+// guest home page
+Route::get('/GuestHome', function () {
+    return view('home');
+});

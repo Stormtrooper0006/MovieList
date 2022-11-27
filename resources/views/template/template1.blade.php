@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/GuestHome">MovieList</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
         @yield('content')
     </main>
 
-    <footer class="text-center font-weight-bold bg-dark pt-1 pb-1">
+    <footer class="text-center font-weight-bold pt-1 pb-1">
         <h1>MovieList</h1>
         <p>Privacy Policy | Terms of Service | Contact Us | About Us</p>
         <p>Copyright © 2022 MovieList All Rights Reserved</p>

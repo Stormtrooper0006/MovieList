@@ -1,4 +1,4 @@
-@extends('template1')
+@extends('/template/template1')
 
 @section('title', 'Register')
 
@@ -34,5 +34,4 @@
             </p>
         </form>
     </div>
-    
 @endsection

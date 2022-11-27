@@ -8,30 +8,51 @@ body {
 
 * {
     box-sizing: border-box;
+    color: white;
 }
 
-body {
+body,
+.card-body {
     background-color: black;
 }
 
+.card {
+    width: 15rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 25px;
+}
+
+nav {
+    background-color: #191a21;
+}
+
 footer {
-    position: fixed;
+    /* position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
-    color: white;
+    width: 100%; */
+    background-color: #191a21;
 }
 
 #loginForm {
-    color: white;
     margin-top: 4rem;
 }
 
 #registerForm {
-    color: white;
     margin-top: 1rem;
 }
 
 a:link {
     text-decoration: none;
+}
+
+.carousel-image {
+    height: 1080px;
+}
+
+hr {
+    background-color: lightgrey;
 }

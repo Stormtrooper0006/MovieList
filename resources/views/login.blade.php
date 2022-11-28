@@ -1,10 +1,10 @@
-@extends('/template/template1')
+@extends('/navTemplate/guestTemplate')
 
-@section('title')
-    @yield('title')
+@section('title1')
+    @yield('title2')
 @endsection
 
-@section('content')
+@section('content1')
     <div class="d-flex flex-column align-items-center" id="loginForm">
         <form action="/LoginAsUser" method="post">
             <h1>Welcome to MovieList</h1>

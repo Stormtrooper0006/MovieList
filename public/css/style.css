@@ -18,6 +18,11 @@ body,
 
 .card {
     width: 15rem;
+    border: none;
+}
+
+.card-text {
+    color: grey;
 }
 
 .carousel-control-prev,
@@ -55,4 +60,19 @@ a:link {
 
 hr {
     background-color: lightgrey;
+}
+
+#searchBar {
+    width: 150px;
+}
+
+#btnGroupDrop,
+#btnGroupDrop:active {
+    background-color: transparent;
+    border: none;
+}
+
+#profileImg {
+    width: 25px;
+    height: 25px;
 }

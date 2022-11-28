@@ -1,8 +1,8 @@
-@extends('/template/template1')
+@extends('/navTemplate/guestTemplate')
 
-@section('title', 'Register')
+@section('title1', 'Register')
 
-@section('content')
+@section('content1')
     <div class="d-flex flex-column align-items-center" id="registerForm">
         <form action="/RegisterUser" method="post">
             <h1>Welcome to MovieList</h1>

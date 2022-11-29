@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 // user login page
 Route::get('/', function () {
-    return view('userLogin');
+    return view('homeTemplate');
 });
 Route::get('/UserLogin', function () {
     return view('userLogin');
@@ -30,4 +30,7 @@ Route::get('/UserRegister', function () {
 // home page
 Route::get('/GuestHome', function () {
     return view('homeTemplate');
+});
+Route::get('/AdminHome', function () {
+    return view('adminHome');
 });

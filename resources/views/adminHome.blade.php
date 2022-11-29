@@ -1,4 +1,4 @@
-@extends('/navTemplate/guestTemplate')
+@extends('/navTemplate/adminTemplate')
 
 @section('title1', 'Home')
 
@@ -115,7 +115,8 @@
             <div class="col-md-9">
                 <h3 class="font-weight-bold" id="temp">Show</h3>
             </div>
-            <div class="col-md-3">
+            <a class="btn btn-primary col-md-1" href="#">add movie</a>
+            <div class="col-md-2">
                     <input class="form-control me-2" id="movieSearch" type="text" onkeyup="searchSort()" placeholder="Search movie..." aria-label="Search movie">                </form>
             </div>
         </div>

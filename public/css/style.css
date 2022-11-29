@@ -76,3 +76,12 @@ hr {
     width: 25px;
     height: 25px;
 }
+
+.sort {
+    background-color: #191a21;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}

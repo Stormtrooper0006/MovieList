@@ -12,25 +12,41 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// user login page
-Route::get('/', function () {
-    return view('homeTemplate');
-});
+// login page
 Route::get('/UserLogin', function () {
     return view('userLogin');
 });
-// admin login page
 Route::get('/AdminLogin', function () {
     return view('adminLogin');
 });
-// user account register page
+
+// register page
 Route::get('/UserRegister', function () {
     return view('userRegister');
 });
+
 // home page
+Route::get('/', function () {
+    return view('guestHome');
+});
 Route::get('/GuestHome', function () {
-    return view('homeTemplate');
+    return view('guestHome');
+});
+Route::get('/UserHome', function () {
+    return view('userHome');
 });
 Route::get('/AdminHome', function () {
     return view('adminHome');
+});
+
+
+// actors page
+Route::get('/GuestActors', function () {
+    return view('guestActors');
+});
+Route::get('/UserActors', function () {
+    return view('userActors');
+});
+Route::get('/AdminActors', function () {
+    return view('adminActors');
 });

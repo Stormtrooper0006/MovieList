@@ -1,6 +1,6 @@
-@extends('login')
+@extends('loginTemplate')
 
-@section('title2', 'Login as User')
+@section('title2', 'User Login')
 
 @section('content2')
     <div class="text-center">

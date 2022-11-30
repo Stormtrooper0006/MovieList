@@ -1,9 +1,9 @@
 function searchSort() {
     var input, filter, match, cardList, cardItem, title;
 
-    input = document.getElementById("movieSearch");
+    input = document.getElementById("search");
     filter = input.value.toUpperCase();
-    cardList = document.getElementById("movieCardList");
+    cardList = document.getElementById("cardList");
     cardItem = cardList.getElementsByClassName("card-item");
 
     for (var i = 0; i < cardItem.length; i++) {
@@ -22,7 +22,7 @@ function searchSort() {
 function sortAsc() {
     var cardList, cardItem, title, swapping, needSwap;
 
-    cardList = document.getElementById("movieCardList");
+    cardList = document.getElementById("cardList");
 
     swapping = true;
 
@@ -33,8 +33,8 @@ function sortAsc() {
         for (var i = 0; i < title.length - 1; i++) {
             needSwap = false;
             if (
-                title[i].innerHTML.toLowerCase() >
-                title[i + 1].innerHTML.toLowerCase()
+                title[i].innerHTML.toUpperCase() >
+                title[i + 1].innerHTML.toUpperCase()
             ) {
                 needSwap = true;
                 break;
@@ -50,7 +50,7 @@ function sortAsc() {
 function sortDsc() {
     var cardList, cardItem, title, swapping, needSwap;
 
-    cardList = document.getElementById("movieCardList");
+    cardList = document.getElementById("cardList");
 
     swapping = true;
 
@@ -61,8 +61,8 @@ function sortDsc() {
         for (var i = 0; i < title.length - 1; i++) {
             needSwap = false;
             if (
-                title[i].innerHTML.toLowerCase() <
-                title[i + 1].innerHTML.toLowerCase()
+                title[i].innerHTML.toUpperCase() <
+                title[i + 1].innerHTML.toUpperCase()
             ) {
                 needSwap = true;
                 break;

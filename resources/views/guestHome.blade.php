@@ -1,4 +1,4 @@
-@extends('/navTemplate/adminTemplate')
+@extends('/navTemplate/guestTemplate')
 
 @section('title1', 'Home')
 
@@ -6,7 +6,7 @@
     {{-- hero section --}}
     <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            {{-- @foreach ($collection as $item)
+           {{-- @foreach ($collection as $item)
                 @if ($item->first)
                     <div class="carousel-item active" data-bs-interval="5000">
                         <a href="#">
@@ -60,8 +60,8 @@
                     <div class="card m-2" style="width: 15rem;">
                         <img class="card-img-top" src={{'/storage/assets/'.$item->movieCardImage}} alt="Movie card image">
                         <div class="card-body">
-                            <h5 class="card-title">{{$item->title}}</h5>
-                            <p class="card-text">{{$item->year}}</p>
+                            <h5 class="card-title">{{'/storage/assets/'.$item->title}}</h5>
+                            <p class="card-text">{{'/storage/assets/'.$item->year}}</p>
                         </div>
                     </div>    
                 </a>
@@ -122,10 +122,9 @@
     {{-- movie section --}}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <h3 class="font-weight-bold" id="temp">Show</h3>
             </div>
-            <a class="btn btn-primary col-md-1" href="#">Add Movie</a>
             <div class="col-md-2">
                     <input class="form-control me-2" id="search" type="text" onkeyup="searchSort()" placeholder="Search movie..." aria-label="Search movie">
             </div>

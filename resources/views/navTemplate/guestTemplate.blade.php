@@ -18,7 +18,7 @@
                         <a class="nav-link" href="/GuestHome">Home</a>
                     </li>
                     <li class="nav-item p-1">
-                        <a class="nav-link" href="/GuestUserActors">Actors</a>
+                        <a class="nav-link" href="/GuestActors">Actors</a>
                     </li>
                     <li class="nav-item p-1">
                         <a class="nav-link btn btn-primary" href="/UserRegister">Register</a>

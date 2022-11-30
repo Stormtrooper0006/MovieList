@@ -8,17 +8,17 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">MovieList</a>
+            <a class="navbar-brand" href="/UserHome">MovieList</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="Navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item p-1">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/UserHome">Home</a>
                     </li>
                     <li class="nav-item p-1">
-                        <a class="nav-link" href="#">Actors</a>
+                        <a class="nav-link" href="/UserActors">Actors</a>
                     </li>
                     <li class="nav-item p-1">
                         <a class="nav-link" href="#">My Watchlist</a>
@@ -29,7 +29,7 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><a class="dropdown-item" href="/GuestHome">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

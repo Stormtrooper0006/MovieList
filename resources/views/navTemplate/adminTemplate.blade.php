@@ -18,7 +18,7 @@
                         <a class="nav-link" href="/AdminHome">Home</a>
                     </li>
                     <li class="nav-item p-1">
-                        <a class="nav-link" href="#">Actors</a>
+                        <a class="nav-link" href="/AdminActors">Actors</a>
                     </li>
                     <li class="nav-item dropdown p-1">
                         <button id="btnGroupDrop" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -26,7 +26,7 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><a class="dropdown-item" href="/GuestHome">Logout</a></li>
                         </ul>
                     </li>
                 </ul>

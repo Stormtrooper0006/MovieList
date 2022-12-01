@@ -50,3 +50,8 @@ Route::get('/UserActors', function () {
 Route::get('/AdminActors', function () {
     return view('adminActors');
 });
+
+// watchlist page
+Route::get('/Watchlist', function () {
+    return view('watchlist');
+});

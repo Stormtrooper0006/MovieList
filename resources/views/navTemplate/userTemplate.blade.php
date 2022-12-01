@@ -21,7 +21,7 @@
                         <a class="nav-link" href="/UserActors">Actors</a>
                     </li>
                     <li class="nav-item p-1">
-                        <a class="nav-link" href="#">My Watchlist</a>
+                        <a class="nav-link" href="/Watchlist">My Watchlist</a>
                     </li>
                     <li class="nav-item dropdown p-1">
                         <button id="btnGroupDrop" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

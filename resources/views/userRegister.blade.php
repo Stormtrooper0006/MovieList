@@ -4,7 +4,8 @@
 
 @section('content1')
     <div class="d-flex flex-column align-items-center" id="registerForm">
-        <form action="/RegisterUser" method="post">
+        <form action="#" method="post">
+            @csrf
             <h1>Welcome to MovieList</h1>
             {{-- username --}}
             <div class="mb-4">

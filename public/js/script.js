@@ -74,3 +74,75 @@ function sortDsc() {
         }
     }
 }
+
+function showAll() {
+    var match, cardList, cardItem, genre;
+
+    cardList = document.getElementById("cardList");
+    cardItem = cardList.getElementsByClassName("card-item");
+
+    for (var i = 0; i < cardItem.length; i++) cardItem[i].style.display = "";
+}
+
+function sortGenre(input) {
+    var match, cardList, cardItem, genre;
+
+    cardList = document.getElementById("cardList");
+    cardItem = cardList.getElementsByClassName("card-item");
+
+    for (var i = 0; i < cardItem.length; i++) {
+        genre = cardItem[i].getElementsByClassName("genre");
+        for (var j = 0; j < genre.length; j++)
+            if (genre[j].innerHTML === input) match = true;
+        if (match) {
+            cardItem[i].style.display = "";
+            match = false;
+        } else cardItem[i].style.display = "none";
+    }
+}
+
+function sortComedy() {
+    sortGenre("Comedy");
+}
+function sortCrime() {
+    sortGenre("Crime");
+}
+function sortDrama() {
+    sortGenre("Drama");
+}
+function sortAction() {
+    sortGenre("Action");
+}
+function sortFantasy() {
+    sortGenre("Fantasy");
+}
+function sortHistory() {
+    sortGenre("History");
+}
+
+function sortStatus(input) {
+    var match, cardList, cardItem, status;
+
+    cardList = document.getElementById("cardList");
+    cardItem = cardList.getElementsByClassName("card-item");
+
+    for (var i = 0; i < cardItem.length; i++) {
+        status = cardItem[i].getElementsByClassName("status");
+        for (var j = 0; j < status.length; j++)
+            if (status[j].innerHTML === input) match = true;
+        if (match) {
+            cardItem[i].style.display = "";
+            match = false;
+        } else cardItem[i].style.display = "none";
+    }
+}
+
+function sortPlanned() {
+    sortStatus("Planned");
+}
+function sortWatching() {
+    sortStatus("Watching");
+}
+function sortFinished() {
+    sortStatus("Finished");
+}

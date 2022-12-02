@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-9">
-            <h1 class="font-weight-bold" id="temp">Actors</h1>
+            <h1 id="temp">Actors</h1>
         </div>
         <div class="col-md-3 mt-3">
                 <input class="form-control me-2" id="search" type="text" onkeyup="searchSort()" placeholder="Search actor..." aria-label="Search actor">

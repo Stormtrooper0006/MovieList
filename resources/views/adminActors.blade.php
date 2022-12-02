@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-9">
-            <h1 class="font-weight-bold" id="temp">Actors</h1>
+            <h1 id="temp">Actors</h1>
         </div>
         <a class="btn btn-primary col-md-1 mt-3" href="#">Add Actor</a>
         <div class="col-md-2 mt-3">

@@ -27,22 +27,22 @@
             <div class="card m-2">
                 <div class="d-flex">
                     <a href="#">
-                        <img class="card-img-top" style="width: 8rem" src={{'/storage/assets/'.$item->movieCardImage}} alt="Movie card image">
+                        <img class="card-img-top" style="width: 8rem" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                     </a>
                     <div class="card-body bg-dark">
                         <h3 class="card-title ms-2 pt-3">{{$item->title}}</h5>                        
                         <p class="card-text status ms-2">{{$item->status}}</p>
                         <button type="button" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#modalMenu">Menu</button>     
-                        <form action="#" method="post">       
-                            @csrf    
-                            @method('patch')           
-                            <div class="modal fade" id="modalMenu" tabindex="-1" aria-labelledby="modalMenuLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content bg-dark">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="modalMenuLabel">Change Status</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
+                        <div class="modal fade" id="modalMenu" tabindex="-1" aria-labelledby="modalMenuLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="modalMenuLabel">Change Status</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <form action="#" method="post">       
+                                        @csrf    
+                                        @method('patch') 
                                         <div class="modal-body">
                                             <select class="form-select" aria-label="select status">
                                                 <option selected>Select Status</option>
@@ -54,12 +54,12 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="sumit" class="btn btn-primary">Save changes</button>
+                                            <button type="sumit" class="btn btn-primary">Save Changes</button>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
-                        </form>
+                        </div>    
                     </div>
                 </div>   
             </div>
@@ -81,34 +81,34 @@
                     <div class="card-body bg-dark">
                         <h5 class="card-title ms-2 pt-3" style="font-size: 25px;">Ashiaap</h5>                       
                         <p class="card-text status ms-2">Planned</p>
-                        <button type="button" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#modalMenu">Menu</button>     
-                        <form action="#" method="post">       
-                            @csrf         
-                            @method('patch')      
-                            <div class="modal fade" id="modalMenu" tabindex="-1" aria-labelledby="modalMenuLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content bg-dark">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="modalMenuLabel">Change Status</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
+                        <button type="button" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#modalMenu">Menu</button>           
+                        <div class="modal fade" id="modalMenu" tabindex="-1" aria-labelledby="modalMenuLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="modalMenuLabel">Change Status</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <form action="#" method="post">       
+                                        @csrf         
+                                        @method('patch')
                                         <div class="modal-body">
-                                            <select class="form-select" aria-label="select status">
+                                            <select class="form-select" id="status" aria-label="select status">
                                                 <option selected>Select Status</option>
-                                                <option value="1">Planned</option>
-                                                <option value="2">Watching</option>
-                                                <option value="3">Finished</option>
-                                                <option value="4">Remove</option>
-                                            </select>
+                                                <option value="Planned">Planned</option>
+                                                <option value="Watching">Watching</option>
+                                                <option value="Finished">Finished</option>
+                                                <option value="Remove">Remove</option>
+                                            </select>    
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="sumit" class="btn btn-primary">Save changes</button>
+                                            <button type="sumit" class="btn btn-primary">Save Changes</button>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
-                            </div>
-                        </form>
+                            </div>     
+                        </div>
                     </div>
                 </div>   
             </div>

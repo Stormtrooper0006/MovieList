@@ -25,7 +25,6 @@
                             <img id="profileImg" src="{{'/storage/assets/icon/profile.png'}}" alt="profile">
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
                             <li><a class="dropdown-item" href="/GuestHome">Logout</a></li>
                         </ul>
                     </li>

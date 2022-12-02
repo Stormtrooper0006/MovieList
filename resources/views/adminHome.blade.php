@@ -10,13 +10,13 @@
                 @if ($item->first)
                     <div class="carousel-item active" data-bs-interval="5000">
                         <a href="#">
-                            <img class="d-block w-100" src={{'/storage/assets/'.$item->movieBannerImage}} alt="Movie banner image">
+                            <img class="d-block w-100" src={{'/storage/assets/'.$item->movieBackgroundImage}} alt="Movie banner image">
                         </a>
                     </div>
                 @else
                     <div class="carousel-item" data-bs-interval="5000">
                         <a href="#">
-                            <img class="d-block w-100" src={{'/storage/assets/'.$item->movieBannerImage}} alt="Movie banner image">
+                            <img class="d-block w-100" src={{'/storage/assets/'.$item->movieBackgroundImage}} alt="Movie banner image">
                         </a>
                     </div>
                 @endif
@@ -51,13 +51,13 @@
       </div>
 
     {{-- popular section  --}}
-    <h3 class="font-weight-bold mt-3 mb-2 pb-2 ps-2">Popular</h3>
+    <h3 class="fw-bold mt-3 mb-2 pb-2 ps-2">Popular</h3>
     <hr>
     <div class="justify-content-center container-sm d-flex flex-wrap gap-1 mt-2">
         {{-- @foreach ($collection as $item)
             <a href="#">
                 <div class="card m-2" style="width: 15rem;">
-                    <img class="card-img-top" src={{'/storage/assets/'.$item->movieCardImage}} alt="Movie card image">
+                    <img class="card-img-top" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                     <div class="card-body bg-dark">
                         <h5 class="card-title">{{$item->title}}</h5>
                         <p class="card-text">{{$item->year}}</p>
@@ -82,12 +82,12 @@
     </div>
 
     {{-- movie section --}}
-    <div class="container-fluid">
+    <div class="container-fluid mt-2">
         <div class="row">
             <div class="col-md-9">
-                <h3 class="font-weight-bold" id="temp">Show</h3>
+                <h3 class="fw-bold" id="temp">Show</h3>
             </div>
-            <a class="btn btn-primary col-md-1" href="#">Add Movie</a>
+            <a class="btn btn-primary col-md-1" href="/CreateMovie">Add Movie</a>
             <div class="col-md-2">
                     <input class="form-control me-2" id="search" type="text" onkeyup="searchSort()" placeholder="Search movie..." aria-label="Search movie">
             </div>
@@ -95,10 +95,11 @@
     </div>
     <hr>
     <ul class="d-flex mt-3 mb-2 pb-2 ps-1">
+        <li><button class="sort btn m-2" onclick="showAll()">All</button></li>
+        <li><button class="sort btn m-2" onclick="sortAction()">Action</button></li>
         <li><button class="sort btn m-2" onclick="sortComedy()">Comedy</button></li>
         <li><button class="sort btn m-2" onclick="sortCrime()">Crime</button></li>
         <li><button class="sort btn m-2" onclick="sortDrama()">Drama</button></li>
-        <li><button class="sort btn m-2" onclick="sortAction()">Action</button></li>
         <li><button class="sort btn m-2" onclick="sortFantasy()">Fantasy</button></li>
         <li><button class="sort btn m-2" onclick="sortHistory()">History</button></li>
     </ul>
@@ -111,7 +112,7 @@
         {{-- @foreach ($collection as $item)
             <a class="card-item" href="#">
                 <div class="card m-2" style="width: 15rem;">
-                    <img class="card-img-top" src={{'/storage/assets/'.$item->movieCardImage}} alt="Movie card image">
+                    <img class="card-img-top" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                     <div class="card-body bg-dark">
                         <h5 class="card-title">{{$item->title}}</h5>
                         <p class="card-text">{{$item->year}}</p>

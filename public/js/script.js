@@ -76,7 +76,7 @@ function sortDsc() {
 }
 
 function showAll() {
-    var match, cardList, cardItem, genre;
+    var cardList, cardItem;
 
     cardList = document.getElementById("cardList");
     cardItem = cardList.getElementsByClassName("card-item");
@@ -145,4 +145,14 @@ function sortWatching() {
 }
 function sortFinished() {
     sortStatus("Finished");
+}
+
+var i = 0,
+    actorForm = document.getElementById("actorForm");
+function addMoreActor() {
+    var newForm = actorForm.cloneNode(true);
+
+    newForm.id = "actorForm" + ++i;
+    newForm.style.display = "";
+    actorForm.parentNode.appendChild(newForm);
 }

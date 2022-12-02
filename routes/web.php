@@ -52,6 +52,43 @@ Route::get('/AdminActors', function () {
 });
 
 // watchlist page
-Route::get('/Watchlist', function () {
-    return view('watchlist');
+Route::get('/UserWatchlist', function () {
+    return view('userWatchlist');
+});
+
+// profile page
+Route::get('/UserProfile', function () {
+    return view('userProfile');
+});
+
+// movie details page
+Route::get('/GuestMovieDetails', function () {
+    return view('guestMovieDetails');
+});
+Route::get('/UserMovieDetails', function () {
+    return view('userMovieDetails');
+});
+Route::get('/AdminMovieDetails', function () {
+    return view('adminMovieDetails');
+});
+
+// actor details page
+Route::get('/GuestActorDetails', function () {
+    return view('guestActorDetails');
+});
+Route::get('/UserActorDetails', function () {
+    return view('userActorDetails');
+});
+Route::get('/AdminActorDetails', function () {
+    return view('adminActorDetails');
+});
+
+// create update movie page
+Route::get('/CreateMovie', function () {
+    return view('createMovie');
+});
+
+// create update actor page
+Route::get('/CreateActor', function () {
+    return view('createActor');
 });

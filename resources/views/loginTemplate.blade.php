@@ -5,17 +5,17 @@
 @endsection
 
 @section('content1')
-    <div class="d-flex flex-column align-items-center" id="loginForm">
+    <div class="d-flex flex-column align-items-center mt-2">
         <form action="#" method="post">
             @csrf
             <h1>Welcome to MovieList</h1>
             {{-- email --}}
-            <div class="mb-4">
+            <div class="mb-3">
                 <label class="form-label" for="email">Email address</label>
                 <input class="form-control" type="email" id="email" placeholder="Enter your email"/>
             </div>
             {{-- password --}}
-            <div class="mb-4">
+            <div class="mb-3">
                 <label class="form-label" for="password">Password</label>
                 <input class="form-control" type="password" id="password" placeholder="Enter your password"/>
             </div>

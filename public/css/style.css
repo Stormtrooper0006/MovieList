@@ -42,20 +42,8 @@ footer {
     background-color: #191a21;
 }
 
-#loginForm {
-    margin-top: 4rem;
-}
-
-#registerForm {
-    margin-top: 1rem;
-}
-
 a:link {
     text-decoration: none;
-}
-
-.carousel-image {
-    height: 1080px;
 }
 
 hr {
@@ -83,5 +71,41 @@ hr {
 }
 
 ul {
+    padding: 0;
     list-style-type: none;
+}
+
+option {
+    color: black;
+}
+
+#movieDetails {
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+    right: 5rem;
+    z-index: 2;
+}
+
+#bgImage {
+    position: relative;
+    top: 0;
+    z-index: 1;
+    filter: brightness(50%);
+}
+
+#movieDetailsContainer {
+    position: relative;
+}
+
+#movieDetailsImage {
+    height: 36rem;
+}
+
+#actorImage {
+    height: 16rem;
+}
+
+textarea {
+    height: 10rem;
 }

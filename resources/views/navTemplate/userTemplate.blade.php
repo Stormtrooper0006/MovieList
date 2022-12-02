@@ -21,14 +21,14 @@
                         <a class="nav-link" href="/UserActors">Actors</a>
                     </li>
                     <li class="nav-item p-1">
-                        <a class="nav-link" href="/Watchlist">My Watchlist</a>
+                        <a class="nav-link" href="/UserWatchlist">My Watchlist</a>
                     </li>
                     <li class="nav-item dropdown p-1">
                         <button id="btnGroupDrop" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <img id="profileImg" src="{{'/storage/assets/icon/profile.png'}}" alt="profile">
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="/UserProfile">Profile</a></li>
                             <li><a class="dropdown-item" href="/GuestHome">Logout</a></li>
                         </ul>
                     </li>

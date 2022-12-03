@@ -4,7 +4,7 @@
 
 @section('content1')
 <div class="m-4">
-    <form action="#" method="post">
+    <form action="/UpdateActor/{{$collection->id}}" method="post">
         @csrf
         @method("patch")
         <h1>Add Actor</h1>

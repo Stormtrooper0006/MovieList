@@ -8,14 +8,14 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/AdminHome">MovieList</a>
+            <a class="navbar-brand" href="/AdminHome/{{$collection->id}}">MovieList</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="Navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item p-1">
-                        <a class="nav-link" href="/AdminHome">Home</a>
+                        <a class="nav-link" href="/AdminHome/{{$collection->id}}">Home</a>
                     </li>
                     <li class="nav-item p-1">
                         <a class="nav-link" href="/AdminActors">Actors</a>

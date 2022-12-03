@@ -2,6 +2,8 @@
 
 @section('title2', 'User Login')
 
+@section('action', 'action="/UserHome"')
+
 @section('content2')
     <div class="text-center">
         <p>

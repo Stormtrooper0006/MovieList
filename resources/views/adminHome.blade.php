@@ -9,13 +9,13 @@
             {{-- @foreach ($collection as $item)
                 @if ($item->first)
                     <div class="carousel-item active" data-bs-interval="5000">
-                        <a href="#">
+                        <a href="/AdminMovieDetails/{{$item->id}}">
                             <img class="d-block w-100" src={{'/storage/assets/'.$item->movieBackgroundImage}} alt="Movie banner image">
                         </a>
                     </div>
                 @else
                     <div class="carousel-item" data-bs-interval="5000">
-                        <a href="#">
+                        <a href="/AdminMovieDetails/{{$item->id}}">
                             <img class="d-block w-100" src={{'/storage/assets/'.$item->movieBackgroundImage}} alt="Movie banner image">
                         </a>
                     </div>
@@ -55,7 +55,7 @@
     <hr>
     <div class="justify-content-center container-sm d-flex flex-wrap gap-1 mt-2">
         {{-- @foreach ($collection as $item)
-            <a href="#">
+            <a href="/AdminMovieDetails/{{$item->id}}">
                 <div class="card m-2" style="width: 15rem;">
                     <img class="card-img-top" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                     <div class="card-body bg-dark">
@@ -110,7 +110,7 @@
     </div>
     <div class="justify-content-center container-sm d-flex flex-wrap gap-1 mt-2" id="cardList">
         {{-- @foreach ($collection as $item)
-            <a class="card-item" href="#">
+            <a class="card-item" href="/AdminMovieDetails/{{$item->id}}">
                 <div class="card m-2" style="width: 15rem;">
                     <img class="card-img-top" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                     <div class="card-body bg-dark">

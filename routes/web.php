@@ -20,10 +20,13 @@ Route::get('/AdminLogin', function () {
     return view('adminLogin');
 });
 
+
 // register page
 Route::get('/UserRegister', function () {
     return view('userRegister');
 });
+Route::post('/UserRegister');
+
 
 // home page
 Route::get('/', function () {
@@ -32,12 +35,8 @@ Route::get('/', function () {
 Route::get('/GuestHome', function () {
     return view('guestHome');
 });
-Route::get('/UserHome', function () {
-    return view('userHome');
-});
-Route::get('/AdminHome', function () {
-    return view('adminHome');
-});
+Route::get('/UserHome');
+Route::get('/AdminHome');
 
 
 // actors page
@@ -51,44 +50,46 @@ Route::get('/AdminActors', function () {
     return view('adminActors');
 });
 
+
 // watchlist page
-Route::get('/UserWatchlist', function () {
-    return view('userWatchlist');
-});
+Route::get('/UserWatchlist/{id}');
+Route::post('/UserWatchlist/{id}');
+Route::patch('/UserWatchlist/{id}');
+Route::delete('/UserWatchlist/{id}');
+
 
 // profile page
-Route::get('/UserProfile', function () {
-    return view('userProfile');
-});
+Route::get('/UserProfile/{id}');
+Route::patch('/UserProfile/{id}');
+
 
 // movie details page
-Route::get('/GuestMovieDetails', function () {
-    return view('guestMovieDetails');
-});
-Route::get('/UserMovieDetails', function () {
-    return view('userMovieDetails');
-});
-Route::get('/AdminMovieDetails', function () {
-    return view('adminMovieDetails');
-});
+Route::get('/GuestMovieDetails/{id}');
+Route::get('/UserMovieDetails/{id}');
+Route::get('/AdminMovieDetails/{id}');
+Route::delete('/AdminMovieDetails/{id}');
+
 
 // actor details page
-Route::get('/GuestActorDetails', function () {
-    return view('guestActorDetails');
-});
-Route::get('/UserActorDetails', function () {
-    return view('userActorDetails');
-});
-Route::get('/AdminActorDetails', function () {
-    return view('adminActorDetails');
-});
+Route::get('/GuestActorDetails/{id}');
+Route::get('/UserActorDetails/{id}');
+Route::get('/AdminActorDetails/{id}');
+Route::delete('/AdminActorDetails/{id}');
+
 
 // create update movie page
 Route::get('/CreateMovie', function () {
     return view('createMovie');
 });
+Route::post('/CreateMovie');
+Route::get('/UpdateMovie/{id}');
+Route::patch('/UpdateMovie/{id}');
+
 
 // create update actor page
 Route::get('/CreateActor', function () {
     return view('createActor');
 });
+Route::post('/CreateActor');
+Route::get('/UpdateActor/{id}');
+Route::patch('/UpdateActor/{id}');

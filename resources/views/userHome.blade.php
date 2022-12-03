@@ -9,13 +9,13 @@
             {{-- @foreach ($collection as $item)
                 @if ($item->first)
                     <div class="carousel-item active" data-bs-interval="5000">
-                        <a href="#">
+                        <a href="/UserMovieDetails/{{$item->id}}">
                             <img class="d-block w-100" src={{'/storage/assets/'.$item->movieBackgroundImage}} alt="Movie banner image">
                         </a>
                     </div>
                 @else
                     <div class="carousel-item" data-bs-interval="5000">
-                        <a href="#">
+                        <a href="/UserMovieDetails/{{$item->id}}">
                             <img class="d-block w-100" src={{'/storage/assets/'.$item->movieBackgroundImage}} alt="Movie banner image">
                         </a>
                     </div>
@@ -55,7 +55,7 @@
     <hr>
     <div class="justify-content-center container-sm d-flex flex-wrap gap-1 mt-2">
         {{-- @foreach ($collection as $item)
-            <a href="#">
+            <a href="/UserMovieDetails/{{$item->id}}">
                 <div class="card m-2" style="width: 15rem;">
                     <img class="card-img-top" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                     <div class="card-body">
@@ -111,16 +111,23 @@
         {{-- @foreach ($collection as $item)
             <div class="card-item">
                 <div class="card m-2" style="width: 15rem;">
-                    <a href="#">
+                    <a href="/UserMovieDetails/{{$item->id}}">
                         <img class="card-img-top" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                     </a>
                     <div class="card-body bg-dark">
                         <h5 class="card-title">{{$item->title}}</h5>
                         <p class="card-text">{{$item->year}}</p>
                         @if ($item->userId == NULL)
-                            <a href="#" class="btn btn-primary w-100">+</a>
+                            <form action="/UserWatchlist/{{$item->id}}" method="post">
+                                @csrf
+                                <button type="submit" class="btn btn-primary w-100">+</button>
+                            </form>
                         @else
-                            <a href="#" class="btn btn-danger w-100">&check;</a>
+                            <form action="/UserWatchlist/{{$item->id}}" method="post">
+                                @csrf
+                                @method("delete")
+                                <button type="submit" class="btn btn-danger w-100">&check;</button>
+                            </form>
                         @endif
                         <p class="genre" hidden>{{$item->genre}}</p>
                     </div>

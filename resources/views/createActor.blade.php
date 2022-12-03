@@ -4,7 +4,7 @@
 
 @section('content1')
 <div class="m-4">
-    <form action="#" method="post">
+    <form action="/CreateActor" method="post">
         @csrf
         <h1>Add Actor</h1>
         <div class="mb-4">

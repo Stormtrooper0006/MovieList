@@ -7,7 +7,7 @@
     {{-- <img id="bgImage" class="d-block w-100" src={{'/storage/assets/'.$collection->movieBackgroundImage}} alt="Movie background image">
     <div id="movieDetails">
         <div class="d-flex align-items-center">
-            <img id="movieDetailsImage" class="rounded" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
+            <img id="movieDetailsImage" class="rounded" src={{'/storage/assets/'.$collection->movieImage}} alt="Movie card image">
             <div class="ms-4">
                 <h3 class="fw-bold">{{$collection->title}}</h3>
                 <ul class="d-flex gap-3">
@@ -52,7 +52,7 @@
 <div class="container-fluid d-flex flex-wrap gap-1 mt-2" id="cardList">
     {{-- <div class="d-flex flex-wrap justify-content-center">
         @foreach ($collection as $item)
-            <a class="card-item" href="#">
+            <a class="card-item" href="/GuestActorDetails/{id}">
                 <div class="card m-2" style="width: 15rem;">
                     <img class="card-img-top" src={{'/storage/assets/'.$item->actorImage}} alt="Actor image">
                     <div class="card-body bg-dark">
@@ -83,12 +83,13 @@
             </div>
         </div>    
     </a>
+    {{-- placeholder --}}
 </div>
 <h3 class="fw-bold mt-3 mb-2 pb-2 ps-2">More</h3>
 <hr>
 <div class="justify-content-center container-sm d-flex flex-wrap gap-1 mt-2" id="cardList">
     {{-- @foreach ($collection as $item)
-        <a class="card-item" href="#">
+        <a class="card-item" href="/GuestMovieDetails/{{$item->id}}">
             <div class="card m-2" style="width: 15rem;">
                 <img class="card-img-top" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                 <div class="card-body bg-dark">

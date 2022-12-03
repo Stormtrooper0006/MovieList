@@ -8,7 +8,7 @@
         <div class="col-md-9">
             <h1 id="temp">Actors</h1>
         </div>
-        <a class="btn btn-primary col-md-1 mt-3" href="#">Add Actor</a>
+        <a class="btn btn-primary col-md-1 mt-3" href="/CreateActor">Add Actor</a>
         <div class="col-md-2 mt-3">
                 <input class="form-control me-2" id="search" type="text" onkeyup="searchSort()" placeholder="Search actor..." aria-label="Search actor">
         </div>
@@ -17,7 +17,7 @@
 
 <div class="justify-content-center container-sm d-flex flex-wrap gap-1 mt-2" id="cardList">
     {{-- @foreach ($collection as $item)
-        <a class="card-item" href="#">
+        <a class="card-item" href="/AdminActorDetails/{{$item->id}}">
             <div class="card m-2" style="width: 15rem;">
                 <img class="card-img-top" src={{'/storage/assets/'.$item->actorImage}} alt="Actor image">
                 <div class="card-body bg-dark">

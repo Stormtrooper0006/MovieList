@@ -16,7 +16,7 @@
 
 <div class="justify-content-center container-sm d-flex flex-wrap gap-1 mt-2" id="cardList">
     {{-- @foreach ($collection as $item)
-        <a class="card-item" href="#">
+        <a class="card-item" href="/GuestActorDetails/{id}">
             <div class="card m-2" style="width: 15rem;">
                 <img class="card-img-top" src={{'/storage/assets/'.$item->actorImage}} alt="Actor image">
                 <div class="card-body bg-dark">

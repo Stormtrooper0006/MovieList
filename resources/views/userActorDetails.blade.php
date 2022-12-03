@@ -5,7 +5,7 @@
 @section('content1')
 <div class="d-flex m-4">
     {{-- <div>
-        <img id="actorImage" class="rounded" src={{'/storage/assets/'.$item->actorImage}} alt="Actor image">
+        <img id="actorImage" class="rounded" src={{'/storage/assets/'.$collection->actorImage}} alt="Actor image">
         <h4 class="mb-3">Personal Info</h4>
         <h5>Popularity</h5>
         <p>{{$collection->popularity}}</p>
@@ -17,13 +17,13 @@
         <p>{{$collection->birthplace}}</p>
     </div>
     <div class="ms-4">
-        <h3 class="fw-bold">Shia LaBeouf</h3>
+        <h3 class="fw-bold">{{$collection->name}}</h3>
         <h5>Biography</h5>
         <p>{{$collection->biography}}</p>
         <h3 class="fw-bold mt-3 mb-2 pb-2 ps-2">Known For</h3>
         <hr>
         @foreach ($collection as $item)
-            <a href="#">
+            <a href="/UserMovieDetails/{id}">
                 <div class="card m-2">
                     <img class="card-img-top" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                     <div class="card-body bg-dark">

@@ -26,7 +26,7 @@
         <div class="card-item">
             <div class="card m-2">
                 <div class="d-flex">
-                    <a href="#">
+                    <a href="/UserMovieDetails/{{$item->id}}">
                         <img class="card-img-top" style="width: 8rem" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                     </a>
                     <div class="card-body bg-dark">
@@ -40,7 +40,7 @@
                                         <h1 class="modal-title fs-5" id="modalMenuLabel">Change Status</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <form action="#" method="post">       
+                                    <form action="/UserWatchlist/{{$item->id}}" method="post">       
                                         @csrf    
                                         @method('patch') 
                                         <div class="modal-body">

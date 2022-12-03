@@ -16,9 +16,9 @@
                         <h1 class="modal-title fs-5" id="modalMenuLabel">Update Image</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <form action="#" method="post">       
+                    <form action="/UserProfile/{{$collection->id}}" method="post">       
                         @csrf         
-                        @method('patch')
+                        @method("patch")
                         <div class="modal-body">
                             <label for="profileUrl"></label>
                             <input class="form-control" type="url" id="profileUrl" placeholder="Image URL"/>
@@ -67,8 +67,9 @@
         {{-- placeholder --}}             
     </div>
 
-    {{-- <form action="#" method="post" class="w-25">
+    {{-- <form action="/UserProfile/{{$collection->id}}" method="post" class="w-25">
         @csrf
+        @method("patch")
         <h3  class="text-center">Update Profile</h3>
         <div class="mb-3">
             <label class="form-label" for="username">Username</label>
@@ -96,22 +97,18 @@
     <form action="#" method="post" class="w-25">
         @csrf
         <h3 class="text-center">Update Profile</h3>
-        {{-- username --}}
         <div class="mb-3">
             <label class="form-label" for="username">Username</label>
             <input class="form-control" type="text" id="username" placeholder="Name"/>
         </div>
-        {{-- email --}}
         <div class="mb-3">
             <label class="form-label" for="email">Email</label>
             <input class="form-control" type="email" id="email" placeholder="email@email.com"/>
         </div>
-        {{-- DOB --}}
         <div class="mb-3">
             <label class="form-label" for="dob">DOB</label>
             <input class="form-control" type="date" id="dob"/>
         </div>
-        {{-- phone --}}
         <div class="mb-3">
             <label class="form-label" for="phone">Phone</label>
             <input class="form-control" type="tel" id="phone" placeholder="08123456"/>

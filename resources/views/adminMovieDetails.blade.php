@@ -7,7 +7,7 @@
     {{-- <img id="bgImage" class="d-block w-100" src={{'/storage/assets/'.$collection->movieBackgroundImage}} alt="Movie background image">
     <div id="movieDetails">
         <div class="d-flex align-items-center">
-            <img id="movieDetailsImage" class="rounded" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
+            <img id="movieDetailsImage" class="rounded" src={{'/storage/assets/'.$collection->movieImage}} alt="Movie card image">
             <div class="ms-4">
                 <h3 class="fw-bold">{{$collection->title}}</h3>
                 <ul class="d-flex gap-3">
@@ -21,6 +21,14 @@
                 <p class="fw-bold">{{$collection->director}}</p>
                 <h4>Synopsis</h4>
                 <p>{{$collection->description}}</p>
+                <div class="d-flex gap-4">
+                    <a href="/UpdateMovie/{{$collection->id}}" class="btn btn-primary">Update</a>
+                    <form action="/AdminMovieDetails/{{$collection->id}}" method="post">
+                        @csrf
+                        @method('delete')
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>        
+                </div>
             </div>
         </div>
     </div> --}}
@@ -44,10 +52,9 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis repellendus sapiente vero. Consequuntur obcaecati nisi tempore hic harum ipsum, modi ullam eius voluptates cum aliquam accusantium, maxime impedit maiores reiciendis!</p>
                 <div class="d-flex gap-4">
                     <a href="#" class="btn btn-primary">Update</a>
-                    <form action="#" method="POST">
+                    <form action="#" method="post">
                         @csrf
                         @method('delete')
-                        <input type="hidden" name="id" value="">
                         <button class="btn btn-danger" type="submit">Delete</button>
                     </form>        
                 </div>
@@ -61,7 +68,7 @@
 <div class="container-fluid d-flex flex-wrap gap-1 mt-2" id="cardList">
     {{-- <div class="d-flex flex-wrap justify-content-center">
         @foreach ($collection as $item)
-            <a class="card-item" href="#">
+            <a class="card-item" href="/AdminActorDetails/{{$item->id}}">
                 <div class="card m-2" style="width: 15rem;">
                     <img class="card-img-top" src={{'/storage/assets/'.$item->actorImage}} alt="Actor image">
                     <div class="card-body bg-dark">
@@ -92,12 +99,13 @@
             </div>
         </div>    
     </a>
+    {{-- placeholder --}}
 </div>
 <h3 class="fw-bold mt-3 mb-2 pb-2 ps-2">More</h3>
 <hr>
 <div class="justify-content-center container-sm d-flex flex-wrap gap-1 mt-2" id="cardList">
     {{-- @foreach ($collection as $item)
-        <a class="card-item" href="#">
+        <a class="card-item" href="/AdminMovieDetails/{{$item->id}}">
             <div class="card m-2" style="width: 15rem;">
                 <img class="card-img-top" src={{'/storage/assets/'.$item->movieImage}} alt="Movie card image">
                 <div class="card-body bg-dark">
